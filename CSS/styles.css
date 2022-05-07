@@ -1,0 +1,196 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+div.container {
+  border: 5px solid #006D77;
+  width: 99%;
+  margin: 0 auto;
+}
+
+header {
+  display:block;
+  background-color: #EDF6F9;
+  color: #006D77;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+div.logo-title {
+  width: 100%;
+  margin: 0 0;
+}
+
+nav {
+  clear:both;
+  display:flex;
+  justify-content: space-between;
+  background-color: #62808b;
+}
+
+nav ul {
+  display:inline-flex;
+  width: 100%;
+}
+
+.page-links {
+  width:60%;
+}
+
+.page-links ul li {
+  display:inline-flex;
+  flex-grow: 1;
+  width: 120px;
+  justify-content: space-around;
+  margin-top: 12px;
+  line-height: 2em;
+  border-right: 1px solid white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-variant: small-caps;
+
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  -ms-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.page-links ul li:last-child {
+  border-right: none;
+}
+
+.social-links ul li {
+  display:inline-flex;
+  width: 100px;
+  justify-content: space-around;
+  margin-top: 10px;
+  line-height: 2em;
+}
+
+.page-links ul li:hover {
+  display:block;
+  text-align: center;
+  background-color: #42a7b3;
+  font-weight: bold;
+  text-decoration:underline;
+  flex-grow: 3;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  display: block;
+}
+
+nav ul li.active a {
+  color: black;
+  font-weight: bold;
+
+}
+
+nav ul li a img {
+  width: 120%;
+  color: white;
+}
+
+article {
+  clear: both;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: space-around;
+  margin: 15px 10px;
+}
+
+.statement {
+  padding-top: 150px;
+  width: 50%;
+  font-size: larger;
+}
+
+.side {
+  width: 45%;
+}
+
+.side img {
+  width: 100%;
+  height: 100%;
+  /* take the aspect ratio of first image and 
+     fit the rest images into the same space */
+  object-fit: cover;
+}
+
+h1,
+p {
+  padding: 10px;
+}
+
+section {
+  display: flex;
+  justify-content: space-around;
+  margin: 10px 0;
+}
+
+section img {
+  width: 100%;
+  margin-top: 20px;
+}
+
+div.left,
+div.middle,
+div.right {
+  width: 30%;
+}
+
+footer {
+  clear: both;
+  background-color: #EDF6F9;
+  color: #006D77;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 2em;
+  padding-left: 10px;
+}
+
+@media screen and (max-width: 600px) {
+  nav {
+    display: flex;
+    float: left;
+  }
+
+  .page-links ul {
+    flex-direction: column;
+  }
+
+  nav ul li:hover {
+    flex-grow: 0;
+    font-size: large;
+    font-weight: bold;
+  }
+  
+  article {
+    margin: 0;
+    flex-wrap: wrap-reverse;
+  }
+  
+  .statement {
+        clear: both;
+        padding-top: 0;
+  }
+  
+  section {
+    clear: both;
+    display: block;
+  }
+
+  .statement, .side {
+    width: 99%;
+    margin: 10px 0;
+  }
+
+  div.left,
+  div.middle,
+  div.right {
+    width: 95%;
+    margin: 10px;
+  }
+}
